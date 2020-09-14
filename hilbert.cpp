@@ -6,13 +6,12 @@
 /*   By: prp <tfm357@gmail.com>                    --`---'-------------       */
 /*                                                 54 69 6E 66 6F 69 6C       */
 /*   Created: 2020/09/11 21:56:28 by prp              2E 54 65 63 68          */
-/*   Updated: 2020/09/13 23:47:49 by prp              50 2E 52 2E 50          */
+/*   Updated: 2020/09/13 23:57:12 by prp              50 2E 52 2E 50          */
 /*                                                                            */
 /* ************************************************************************** */
 #include <cmath>
 #include <iostream>
 
-// #include "hilbert_curve.hpp"
 #include "hilbert.hpp"
 
 constexpr auto argument_text = R"--(
@@ -41,7 +40,7 @@ void print_usage( char** av ) {
 
 void write_f32( vec2d c ) {
     vec2f output = {float( c.x ), float( c.y )};
-    // std::cerr << output.x << " x " << output.y << "\n";
+
     std::cout.write( (char*)&output.x, sizeof( output.x ) );
     std::cout.write( (char*)&output.y, sizeof( output.y ) );
 }

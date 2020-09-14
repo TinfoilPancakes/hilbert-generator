@@ -6,7 +6,7 @@
 /*   By: prp <tfm357@gmail.com>                    --`---'-------------       */
 /*                                                 54 69 6E 66 6F 69 6C       */
 /*   Created: 2020/09/13 23:40:49 by prp              2E 54 65 63 68          */
-/*   Updated: 2020/09/13 23:45:59 by prp              50 2E 52 2E 50          */
+/*   Updated: 2020/09/13 23:57:41 by prp              50 2E 52 2E 50          */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef TFPC_HILBERT_HPP
@@ -37,11 +37,13 @@ struct s_curve {
         id &= 3;
         vec2d val = {map[id].x / current_iter, map[id].y / current_iter};
         current_iter *= 2;
+
         if ( id == 3 ) {
             rotate_last();
         } else if ( id == 0 ) {
             rotate_first();
         }
+
         return val;
     }
 };
@@ -49,14 +51,20 @@ struct s_curve {
 using hcurve = struct s_curve;
 
 constexpr vec2d hilbert_idx_to_pos( uint64_t idx, uint32_t order ) {
+
     vec2d  pos = {0.5, 0.5};
     hcurve h;
+
     while ( order ) {
+
         uint64_t mask = 3 << ( ( order - 1 ) * 2 );
         uint64_t id   = ( idx & mask ) >> ( ( order - 1 ) * 2 );
-        auto     step = h.step( id );
+
+        auto step = h.step( id );
+
         pos.x += step.x;
         pos.y += step.y;
+
         order -= 1;
     }
 
