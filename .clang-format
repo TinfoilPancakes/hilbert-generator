@@ -1,0 +1,26 @@
+---
+# Default to LLVM code style
+BasedOnStyle: LLVM
+# Customized Settings
+IndentWidth: 4
+UseTab: Never
+---
+Language: Cpp
+MaxEmptyLinesToKeep: 1
+DerivePointerAlignment: false
+PointerAlignment: Left
+SpacesInParentheses: true
+ReflowComments: true
+SortIncludes: true
+IndentWrappedFunctionNames: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+BreakStringLiterals: true
+BreakConstructorInitializers: BeforeComma
+BinPackParameters: false
+BinPackArguments: false
+AlwaysBreakTemplateDeclarations: true
+AlignTrailingComments: true
+AlignOperands: true
+AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: true
+---
