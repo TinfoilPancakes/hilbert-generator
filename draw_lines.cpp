@@ -6,7 +6,7 @@
 /*   By: prp <tfm357@gmail.com>                    --`---'-------------       */
 /*                                                 54 69 6E 66 6F 69 6C       */
 /*   Created: 2020/09/11 16:09:39 by prp              2E 54 65 63 68          */
-/*   Updated: 2020/09/13 23:47:53 by prp              50 2E 52 2E 50          */
+/*   Updated: 2020/09/14 00:18:39 by prp              50 2E 52 2E 50          */
 /*                                                                            */
 /* ************************************************************************** */
 #include <iostream>
@@ -25,7 +25,7 @@ struct s_color {
 using color = struct s_color;
 
 int main( int ac, char* av[] ) {
-    // draw lines :)
+
     if ( ac < 3 ) {
         return 1;
     }
